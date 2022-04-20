@@ -1,2 +1,4 @@
 server:
   port: 8080
+krpano:
+  file-path: D://work//krpano
