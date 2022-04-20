@@ -1,6 +1,7 @@
 package com.nari;
 
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -13,8 +14,9 @@ import java.net.UnknownHostException;
 /**
  * 启动类
  */
-@SpringBootApplication
 @Slf4j
+@SpringBootApplication
+@MapperScan("com.nari.dao")
 public class StartupApplication {
 
     public static void main(String[] args) throws UnknownHostException {
