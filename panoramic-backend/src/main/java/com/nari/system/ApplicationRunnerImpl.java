@@ -13,7 +13,7 @@ import java.io.File;
 @Slf4j
 public class ApplicationRunnerImpl implements ApplicationRunner {
 
-    @Value("${krpano.file-path}")
+    @Value("${krpano.tools-path}")
     private String krpanoFile;
 
     @Override
