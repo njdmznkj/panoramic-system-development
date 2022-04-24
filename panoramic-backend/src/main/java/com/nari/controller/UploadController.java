@@ -4,10 +4,7 @@ import com.nari.tools.DeleteFile;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
@@ -28,12 +25,12 @@ public class UploadController {
     private String krpanoFile;
 
     // 执行上传
-    @GetMapping("/upload")
-    public String upload(@RequestParam("file") MultipartFile file, Model model) throws IOException {
+    @GetMapping("/upload/{projectId}")
+    public String upload(@RequestParam("file") MultipartFile file, @PathVariable String projectId, Model model) throws IOException {
 
         //获取用户名
 //        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String name = "liuwenwen";
+        String name = projectId;
         // 获取上传文件名
         String filename = file.getOriginalFilename();
         String fileName = filename.substring(0, filename.length() - 5);
@@ -64,13 +61,14 @@ public class UploadController {
             BufferedReader br = new BufferedReader(isr);
             String content = br.readLine();
             while (content != null) {
-                System.out.println(content);
+//                System.out.println(content);
+                log.info(content);
                 content = br.readLine();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("执行完成.....");
+        log.info("krpano 执行完毕!");
         String[] wenname = new String[4];
         String pathfile = filePath + "rotPhoto/";
         wenname[0] = pathfile + name + "/vtour/usergoods.html";

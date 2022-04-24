@@ -31,7 +31,7 @@ public class ApplicationRunnerImpl implements ApplicationRunner {
 
         if (!StringUtils.isEmpty(krpanoFile)) {
             if (!new File(krpanoFile).exists()) {
-                log.error("krpano未安装,请在" + krpanoFile + "目录下安装！");
+                log.error("请检查" + krpanoFile + "目录下,krpano是否安装！");
             }
         }
 

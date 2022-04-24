@@ -1,7 +1,7 @@
 server:
   port: 8080
 krpano:
-  tools-path: D://tools//krpano-1.20.6
+  tools-path: D://tool//krpano-1.20.6
   upload-path: D://tools//upload//
 spring:
   datasource:
