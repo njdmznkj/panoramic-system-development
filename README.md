@@ -30,6 +30,9 @@
 ![输入图片说明](e90dbf4d357514bf65ca4993332ce17.png)
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/1013/140546_ad2dc28c_409757.jpeg "main.jpg")
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/1013/141248_bbe74c9e_409757.jpeg "22222.jpg")
+### 编辑 
+![image](https://github.com/njdmznkj/panoramic-system-development/assets/24431086/55ab52c2-1e81-48ec-b01c-fc50bbe2a785)
+
 
 [大理洱海天域英迪格酒店｜VR全景](https://720yun.com/t/a1vkzypqOie)
 
